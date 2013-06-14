@@ -10,8 +10,8 @@ i.id
 # => "dhuY8"
 i.url
 # => "http://i.imgur.com/dhuY8.jpg"
-i.url(:medium)
-# => "http://i.imgur.com/dhuY8m.jpg"
+i.url(:small)
+# => "http://i.imgur.com/dhuY8s.jpg"
 i.download_url
 # => "http://imgur.com/download/dhuY8"
 ```
@@ -21,3 +21,11 @@ i.download_url
 - `http://i.imgur.com/{image_id}.jpg`
 - `http://imgur.com/download/{image_id}`
 - `http://imgur.com/gallery/{image_id}`
+
+#### Supported `url` sizes
+- `:original` (default)
+- `:huge`
+- `:large`
+- `:medium`
+- `:thumb`
+- `:small`
