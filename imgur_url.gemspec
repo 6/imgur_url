@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Peter Graham"]
   gem.version       = ImgurUrl::VERSION
   gem.summary       = %q{Parse imgur URLs}
+  gem.description   = %q{Parse imgur.com image URLs.}
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
