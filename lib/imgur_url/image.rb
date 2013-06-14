@@ -1,6 +1,16 @@
 module ImgurUrl
   class Image
     attr_reader :original_url
+
+    SIZES = {
+      :small => 's',
+      :thumb => 't',
+      :medium => 'm',
+      :large => 'l',
+      :huge => 'h',
+      :original => '',
+    }
+
     def initialize(url)
       @original_url = url
     end
@@ -13,8 +23,9 @@ module ImgurUrl
       @permalink_url ||= "http://imgur.com/#{image_id}"
     end
 
-    def direct_url
-      @direct_url ||= "http://i.imgur.com/#{image_id}.jpg"
+    def direct_url(size = :original)
+      @direct_urls ||= {}
+      @direct_urls[size] ||= "http://i.imgur.com/#{image_id}#{SIZES[size]}.jpg"
     end
 
     def download_url
