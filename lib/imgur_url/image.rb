@@ -11,8 +11,13 @@ module ImgurUrl
       :original => '',
     }
 
+    ALBUM_PATH = "a"
+
     def initialize(url)
       @original_url = url
+      unless image_id.present? && image_id != ALBUM_PATH
+        raise InvalidUrl
+      end
     end
 
     def image_id

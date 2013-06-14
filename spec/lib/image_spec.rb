@@ -53,5 +53,21 @@ module ImgurUrl
       let(:url) { "http://imgur.com/download/dhuY8" }
       it_behaves_like "with a valid imgur image URL"
     end
+
+    shared_examples "with an invalid URL" do
+      it "raises an InvalidUrl error on initialization" do
+        expect { described_class.new(url) }.to raise_error(ImgurUrl::InvalidUrl)
+      end
+    end
+
+    context "with an imgur album URL" do
+      let(:url) { "http://imgur.com/a/CrSqu" }
+      it_behaves_like "with an invalid URL"
+    end
+
+    context "with a non-imgur URL" do
+      let(:url) { "http://google.com" }
+      it_behaves_like "with an invalid URL"
+    end
   end
 end
