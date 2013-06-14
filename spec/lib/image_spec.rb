@@ -5,7 +5,6 @@ module ImgurUrl
     shared_examples "with a valid imgur image URL" do
       subject { described_class.new(url) }
 
-      its(:original_url) { should == url }
       its(:id) { should == "dhuY8" }
       its(:permalink_url) { should == "http://imgur.com/dhuY8" }
       its(:download_url) { should == "http://imgur.com/download/dhuY8" }
