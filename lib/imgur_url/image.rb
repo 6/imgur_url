@@ -19,7 +19,7 @@ module ImgurUrl
     end
 
     def id
-      @id ||= @original_url.match(%r{imgur\.com/(?:(?:gallery|download)/)?([^.#?/]+)}).andand[1]
+      @id ||= @original_url.match(%r{imgur\.com/(?:download/)?([^.#?/]+)}).andand[1]
     end
 
     def url(size = :original)

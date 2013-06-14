@@ -22,7 +22,6 @@ i.permalink_url
 - `http://imgur.com/{image_id}`
 - `http://i.imgur.com/{image_id}.jpg`
 - `http://imgur.com/download/{image_id}`
-- `http://imgur.com/gallery/{image_id}`
 
 #### Supported `url` sizes
 - `:original` (default)

@@ -43,11 +43,6 @@ module ImgurUrl
       it_behaves_like "with a valid imgur image URL"
     end
 
-    context "a gallery URL" do
-      let(:url) { "http://imgur.com/gallery/dhuY8" }
-      it_behaves_like "with a valid imgur image URL"
-    end
-
     context "a download URL" do
       let(:url) { "http://imgur.com/download/dhuY8" }
       it_behaves_like "with a valid imgur image URL"
