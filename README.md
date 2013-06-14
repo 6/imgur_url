@@ -8,7 +8,7 @@ Ruby gem for dealing with [imgur](http://imgur.com) image URLs.
 i = ImgurUrl::Image.new("http://imgur.com/dhuY8")
 i.id
 # => "dhuY8"
-i.url(:original)
+i.url
 # => "http://i.imgur.com/dhuY8.jpg"
 i.url(:medium)
 # => "http://i.imgur.com/dhuY8m.jpg"
