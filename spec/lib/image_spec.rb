@@ -6,7 +6,7 @@ module ImgurUrl
       subject { described_class.new(url) }
 
       its(:original_url) { should == url }
-      its(:image_id) { should == "dhuY8" }
+      its(:id) { should == "dhuY8" }
       its(:permalink_url) { should == "http://imgur.com/dhuY8" }
       its(:download_url) { should == "http://imgur.com/download/dhuY8" }
       its(:url) { should == "http://i.imgur.com/dhuY8.jpg" }
