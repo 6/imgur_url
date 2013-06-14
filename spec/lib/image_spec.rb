@@ -20,6 +20,12 @@ module ImgurUrl
           subject.url(:thumb).should == "http://i.imgur.com/dhuY8t.jpg"
           subject.url(:small).should == "http://i.imgur.com/dhuY8s.jpg"
         end
+
+        context "with an invalid size parameter" do
+          it "raises an InvalidSize exception" do
+            expect { subject.url(:invalid) }.to raise_error(ImgurUrl::InvalidSize)
+          end
+        end
       end
     end
 

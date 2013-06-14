@@ -20,6 +20,7 @@ module ImgurUrl
     end
 
     def url(size = :original)
+      raise InvalidSize  unless SIZES[size]
       @direct_urls ||= {}
       @direct_urls[size] ||= "http://i.imgur.com/#{image_id}#{SIZES[size]}.jpg"
     end
