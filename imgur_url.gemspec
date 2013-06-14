@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+  gem.homepage = 'http://github.com/6/imgur_url'
 
   gem.add_dependency "andand"
   gem.add_dependency "activesupport"
