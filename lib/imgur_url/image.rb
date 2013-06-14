@@ -19,13 +19,13 @@ module ImgurUrl
       @image_id ||= original_url.match(%r{imgur\.com/(?:(?:gallery|download)/)?([a-zA-Z0-9]+)[^/]*}).andand[1]
     end
 
-    def permalink_url
-      @permalink_url ||= "http://imgur.com/#{image_id}"
-    end
-
-    def direct_url(size = :original)
+    def url(size = :original)
       @direct_urls ||= {}
       @direct_urls[size] ||= "http://i.imgur.com/#{image_id}#{SIZES[size]}.jpg"
+    end
+
+    def permalink_url
+      @permalink_url ||= "http://imgur.com/#{image_id}"
     end
 
     def download_url
