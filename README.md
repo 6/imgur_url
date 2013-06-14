@@ -14,6 +14,8 @@ i.url(:small)
 # => "http://i.imgur.com/dhuY8s.jpg"
 i.download_url
 # => "http://imgur.com/download/dhuY8"
+i.permalink_url
+# => "http://imgur.com/dhuY8"
 ```
 
 #### Recognized input URL formats
