@@ -54,9 +54,20 @@ module ImgurUrl
       end
     end
 
-    context "with an imgur album URL" do
-      let(:url) { "http://imgur.com/a/CrSqu" }
-      it_behaves_like "with an invalid URL"
+    %w[
+      http://imgur.com/a/CrSqu
+      http://imgur.com/blog
+      http://imgur.com/blog/2013/06/11/tech-tuesday-real-time-messaging/
+      http://imgur.com/user/alan
+      http://imgur.com/new/time
+      http://imgur.com/removalrequest
+      http://imgur.com/gallery
+      https://imgur.com/signin
+    ].each do |url|
+      context "with the non-image imgur url: #{url}" do
+        let(:url) { url }
+        it_behaves_like "with an invalid URL"
+      end
     end
 
     context "with a non-imgur URL" do

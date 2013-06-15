@@ -9,17 +9,18 @@ module ImgurUrl
       :original => '',
     }
 
-    ALBUM_PATH = "a"
+    IGNORE_PATHS = %w[
+      gallery
+      removalrequest
+    ]
 
     def initialize(url)
       @original_url = url
-      unless id.present? && id != ALBUM_PATH
-        raise InvalidUrl
-      end
+      raise InvalidUrl  unless id.present? && !IGNORE_PATHS.include?(id)
     end
 
     def id
-      @id ||= @original_url.match(%r{imgur\.com/(?:download/)?([^.#?/]+)}).andand[1]
+      @id ||= @original_url.match(%r{^http://(?:i\.)?imgur\.com/(?:download/)?([^.#?/]{5,})}).andand[1]
     end
 
     def url(size = :original)
