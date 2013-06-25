@@ -16,6 +16,7 @@ module ImgurUrl
           subject.url(:huge).should == "http://i.imgur.com/dhuY8h.jpg"
           subject.url(:large).should == "http://i.imgur.com/dhuY8l.jpg"
           subject.url(:medium).should == "http://i.imgur.com/dhuY8m.jpg"
+          subject.url(:box).should == "http://i.imgur.com/dhuY8b.jpg"
           subject.url(:thumb).should == "http://i.imgur.com/dhuY8t.jpg"
           subject.url(:small).should == "http://i.imgur.com/dhuY8s.jpg"
         end

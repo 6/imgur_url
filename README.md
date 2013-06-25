@@ -25,8 +25,9 @@ i.permalink_url
 
 #### Supported `url` sizes
 - `:original` (default)
-- `:huge`
-- `:large`
-- `:medium`
-- `:thumb`
-- `:small`
+- `:huge` (1024px in largest dimension)
+- `:large` (640px in largest dimension)
+- `:medium` (320px in largest dimension)
+- `:box` (160px/160px center-cropped)
+- `:thumb` (160px in largest dimension)
+- `:small` (90px/90px center-cropped)

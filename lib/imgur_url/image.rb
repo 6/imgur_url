@@ -3,6 +3,7 @@ module ImgurUrl
     SIZES = {
       :small => 's',
       :thumb => 't',
+      :box => 'b',
       :medium => 'm',
       :large => 'l',
       :huge => 'h',
