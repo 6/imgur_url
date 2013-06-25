@@ -15,6 +15,10 @@ module ImgurUrl
       removalrequest
     ]
 
+    def self.from_id(id)
+      self.new("http://imgur.com/#{id}")
+    end
+
     def initialize(url)
       @original_url = url
       raise InvalidUrl  unless id.present? && !IGNORE_PATHS.include?(id)
